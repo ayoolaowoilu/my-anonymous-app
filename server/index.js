@@ -8,7 +8,7 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use("/auth",router)
-app.get("/auth",(req,res)=>{
+app.get("/",(req,res)=>{
     res.send("<h1>Hellow word i am me</h1>")
 })
 
