@@ -12,7 +12,7 @@ export default function Quer(){
 
    const verify =async()=>{
        try {
-         const resp = await axios.post(`https://my-anonymous-app-3.onrender.com/${name}`)
+         const resp = await axios.post(`https://my-anonymous-app-3.onrender.com/auth/verify/${name}`)
          setmsg(resp.data.msg)
          console.log(resp.data)
        } catch (err) {
