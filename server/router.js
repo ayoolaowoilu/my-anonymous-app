@@ -10,8 +10,7 @@ const db = await mysql.createConnection({
     host:process.env.HOST,
     user:process.env.USER,
     password:process.env.PASSWORD,
-    database:process.env.DATABASE,
-    port:process.env.port
+    database:process.env.DATABASE
 })
 if (db){
     console.log("Database connected !")
