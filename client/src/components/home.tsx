@@ -6,13 +6,13 @@ export default function Home(){
     const token = localStorage.getItem("token")
     const [name,setname] = useState<String>("")
       const get =async()=>{
-         const res = await axios.get("http://localhost:4000/auth/data",{
+         const res = await axios.get("https://my-anonymous-app-3.onrender.com/auth/data",{
             headers : { authorization :`bearer ${token}`}
          })
         setname(res.data[0]._name)
       }
       const handlecopy =async()=>{
-        const link = `http://localhost:5173/query/${name}`
+        const link = `https://my-anonymous-app-3.onrender.com/query/${name}`
           try {
             await navigator.clipboard.writeText(link)
           } catch (err) {
@@ -28,7 +28,7 @@ export default function Home(){
       }])
       const getmsg = async() =>{
           try {
-            const resp =await axios.get("http://localhost:4000/auth/anoy")
+            const resp =await axios.get("https://my-anonymous-app-3.onrender.com/auth/anoy")
            setdata(resp.data)
           } catch (err) {
             console.log(err)
@@ -76,7 +76,7 @@ export default function Home(){
     <p className="text-sm text-pretty text-gray-500">
       In this app just send a link to your friends so they can send you anoymous messages 
     </p>
-    <div className="border-b-4 p-[10px]">http:localhost:5473/query/{name}</div>
+    <div className="border-b-4 p-[10px]">http::5473/query/{name}</div>
   </div>
 
   <dl className="mt-6 flex gap-4 sm:gap-6">

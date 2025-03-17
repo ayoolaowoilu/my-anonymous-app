@@ -12,7 +12,7 @@ export default function Quer(){
 
    const verify =async()=>{
        try {
-         const resp = await axios.post(`http://localhost:4000/auth/verify/${name}`)
+         const resp = await axios.post(`https://my-anonymous-app-3.onrender.com/${name}`)
          setmsg(resp.data.msg)
          console.log(resp.data)
        } catch (err) {
@@ -47,7 +47,7 @@ export default function Quer(){
                     </div>  
                     <button onClick={async()=>{
                        try {
-                          const res = await axios.post("http://localhost:4000/auth/send",{name,message})
+                          const res = await axios.post("https://my-anonymous-app-3.onrender.com/auth/send",{name,message})
                           setinfo(res.data.msg)
                           setdis(true)
                        } catch (err) {

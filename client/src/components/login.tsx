@@ -18,7 +18,7 @@ export default function Login(){
          setsta(false)
          setmsg("")
          try {
-            const res = await axios.post("https://my-anonymous-app-today-i1zu7iyxs-khaleeds-projects-02dea468.vercel.app/auth/login",profile)
+            const res = await axios.post("https://my-anonymous-app-3.onrender.com/auth/login",profile)
           localStorage.setItem("token",res.data.token)
             setmsg(res.data.msg)
             setsta(true)
