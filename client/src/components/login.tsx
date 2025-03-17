@@ -41,6 +41,8 @@ return(
 
         </div>
     </div> : null}
+    <div className="font-bold text-3xl text-center">Welcome to anonyim</div>
+    <code className="text-ceenter">By KhaleedCodes</code>
    <div className="min-h-screen grid place-content-center">
     <form onSubmit={handleSubmit} className="w-4/5 p-[10px] border-2 shadow-xl rounded-xl mx-auto ">
     <div className="max-w-[600px]">
