@@ -21,6 +21,7 @@ export default function Home(){
       }
       const logout =()=>{
         localStorage.removeItem("token")
+        window.location.reload()
       }
       const [data,setdata] = useState([{
         _name:"",
@@ -76,7 +77,7 @@ export default function Home(){
     <p className="text-sm text-pretty text-gray-500">
       In this app just send a link to your friends so they can send you anoymous messages 
     </p>
-    <div className="border-b-4 p-[10px]">http::5473/query/{name}</div>
+    <div className="border-b-4 p-[10px]">http:localhost:5473/query/{name}</div>
   </div>
 
   <dl className="mt-6 flex gap-4 sm:gap-6">
@@ -121,11 +122,11 @@ export default function Home(){
       </strong>
 
       <h3 className="mt-4 text-lg font-medium sm:text-xl">
-        <a href="#" className="hover:underline"> Some Interesting Podcast Title </a>
+        <a href="#" className="hover:underline">{info} </a>
       </h3>
 
       <p className="mt-1 text-sm text-gray-700">
-       {info}
+      you can also get anonymous messages
       
       </p>
 
@@ -146,16 +147,10 @@ export default function Home(){
             ></path>
           </svg>
 
-          <p className="text-xs font-medium">48:32 minutes</p>
+         
         </div>
 
-        <span className="hidden sm:block" aria-hidden="true">&middot;</span>
-
-        <p className="mt-2 text-xs font-medium text-gray-500 sm:mt-0">
-          Featuring-3 <a href="#" className="underline hover:text-gray-700">Barry</a>,
-          <a href="#" className="underline hover:text-gray-700">Sandra</a> and
-          <a href="#" className="underline hover:text-gray-700">August</a>
-        </p>
+        
       </div>
     </div>
   </div>
